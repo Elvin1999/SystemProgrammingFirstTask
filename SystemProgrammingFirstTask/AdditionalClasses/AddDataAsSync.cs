@@ -21,8 +21,6 @@ namespace SystemProgrammingFirstTask.AdditionalClasses
             Helper helper = new Helper();
             var items = helper.DeserializeEnDatasFromJson();
             AllEnDatas = new ObservableCollection<EncryptData>(items);
-
-
         }
         public void AddDataToEndataList()
         {

@@ -34,12 +34,10 @@
                             </GridViewColumn>
 
 
-
                         </GridView>
 
                     </ListView.View>
                 </ListView>
-
                 <StackPanel Orientation="Horizontal">
                     <Button Width="80" Height="40" FontSize="20" Content="Play" Background="IndianRed" Margin="10,10"></Button>
                     <Button Width="80" Height="40" FontSize="20" Content="Pause" Background="IndianRed" Margin="10,10"></Button>
