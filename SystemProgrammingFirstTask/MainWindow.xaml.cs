@@ -30,8 +30,10 @@ namespace SystemProgrammingFirstTask
             InitializeComponent();
             EncryptViewModel encryptViewModel = new EncryptViewModel();
             AddDataAsSync addDataAsSync = new AddDataAsSync(encryptViewModel);
-            Thread thread = new Thread(addDataAsSync.AddDataToAnotherList);
+            Thread thread = new Thread(addDataAsSync.AddDataToEndataList);
             thread.Start();
+            Thread thread2 = new Thread(addDataAsSync.AddDataToDeDataList);
+            thread2.Start();
             //for (int i = 0; i < 10; i++)
             //{
             //    EncryptData encryptData = new EncryptData()

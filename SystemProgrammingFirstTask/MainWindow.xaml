@@ -49,7 +49,7 @@
         </Grid>
         <Grid Grid.Column="1" Background="IndianRed">
             <StackPanel Margin="0,60">
-                <ListView ItemsSource="{Binding AllFilials}" Background="IndianRed" SelectedItem="{Binding SelectedFilial}" Width="250"
+                <ListView ItemsSource="{Binding AllDecDatas}" Background="IndianRed"  Width="250"
  Height="250"
                       >
                     <ListView.View>
@@ -64,7 +64,7 @@
                             <GridViewColumn Header="Name" Width="195">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
-                                        <TextBlock Padding="5,0" Text="{Binding Name}"></TextBlock>
+                                        <TextBlock Padding="5,0" Text="{Binding Text}"></TextBlock>
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
