@@ -45,14 +45,18 @@ namespace SystemProgrammingFirstTask.AdditionalClasses
                 AllDenDatas.Add(decryptData);
             }
             encryptViewModel.AllDecDatas = new ObservableCollection<DecryptData>();
-            foreach (var item in AllDenDatas)
+            if (this.encryptViewModel.AllDatas.Count >= this.encryptViewModel.AllDecDatas.Count)
             {
-                App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
+                foreach (var item in AllDenDatas)
                 {
-                    encryptViewModel.AllDecDatas.Add(item);
-                });
-                Thread.Sleep(1000);
+                    App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
+                    {
+                        encryptViewModel.AllDecDatas.Add(item);
+                    });
+                    Thread.Sleep(1000);
+                }
             }
+            this.encryptViewModel.Thread2.Suspend();
         }
     }
 }

@@ -60,6 +60,9 @@
     </ApplicationDefinition>
     <Compile Include="AdditionalClasses\AddDataAsSync.cs" />
     <Compile Include="AdditionalClasses\Helper.cs" />
+    <Compile Include="Commands\DecryptCommand\DePauseCommand.cs" />
+    <Compile Include="Commands\DecryptCommand\DePlayCommand.cs" />
+    <Compile Include="Commands\DecryptCommand\DeResumeCommand.cs" />
     <Compile Include="Commands\EncryptCommand\PauseCommand.cs" />
     <Compile Include="Commands\EncryptCommand\PlayCommand.cs" />
     <Compile Include="Commands\EncryptCommand\ResumeCommand.cs" />

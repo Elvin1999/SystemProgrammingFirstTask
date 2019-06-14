@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+using SystemProgrammingFirstTask.Commands.DecryptCommand;
 using SystemProgrammingFirstTask.Commands.EncryptCommand;
 using SystemProgrammingFirstTask.Entities;
 
@@ -19,6 +19,9 @@ namespace SystemProgrammingFirstTask.ViewModels
         public PlayCommand PlayCommand => new PlayCommand(this);
         public PauseCommand PauseCommand => new PauseCommand(this);
         public ResumeCommand ResumeCommand => new ResumeCommand(this);
+        public DePlayCommand DePlayCommand => new DePlayCommand(this);
+        public DePauseCommand DePauseCommand => new DePauseCommand(this);
+        public DeResumeCommand DeResumeCommand => new DeResumeCommand(this);
         private ObservableCollection<EncryptData> allData;
         public ObservableCollection<EncryptData> AllDatas
         {
