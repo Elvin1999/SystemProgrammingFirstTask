@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using SystemProgrammingFirstTask.Entities;
 
 namespace SystemProgrammingFirstTask
 {
@@ -13,5 +14,10 @@ namespace SystemProgrammingFirstTask
     /// </summary>
     public partial class App : Application
     {
+        public static List<EncryptData> encryptDatas;
+        public App()
+        {
+            encryptDatas = new List<EncryptData>();
+        }
     }
 }

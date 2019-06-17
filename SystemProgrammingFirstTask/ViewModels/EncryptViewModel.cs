@@ -35,6 +35,35 @@ namespace SystemProgrammingFirstTask.ViewModels
                 OnPropertyChanged(new PropertyChangedEventArgs(nameof(AllDatas)));
             }
         }
+        private int statethread1 = 0;
+        public int StateThread1
+        {
+            get
+            {
+                return statethread1;
+
+            }
+            set
+            {
+                statethread1 = value;
+                OnPropertyChanged(new PropertyChangedEventArgs(nameof(StateThread1)));
+            }
+        }
+        private int statethread2 = 0;
+        public int StateThread2
+        {
+            get
+            {
+                return statethread2;
+
+            }
+            set
+            {
+                statethread2 = value;
+                OnPropertyChanged(new PropertyChangedEventArgs(nameof(StateThread2)));
+            }
+        }
+
         private ObservableCollection<DecryptData> allDecData;
         public ObservableCollection<DecryptData> AllDecDatas
         {

@@ -26,6 +26,7 @@ namespace SystemProgrammingFirstTask.Commands.DecryptCommand
 
         public void Execute(object parameter)
         {
+            EncryptViewModel.StateThread1 = 1;
             AddDataAsSync addDataAsSync = new AddDataAsSync(EncryptViewModel);
             EncryptViewModel.Thread2 = new Thread(addDataAsSync.AddDataToDeDataList);
             EncryptViewModel.Thread2.Start();

@@ -59,6 +59,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AdditionalClasses\AddDataAsSync.cs" />
+    <Compile Include="AdditionalClasses\HashHelper.cs" />
     <Compile Include="AdditionalClasses\Helper.cs" />
     <Compile Include="Commands\DecryptCommand\DePauseCommand.cs" />
     <Compile Include="Commands\DecryptCommand\DePlayCommand.cs" />

@@ -27,9 +27,15 @@ namespace SystemProgrammingFirstTask.Commands.DecryptCommand
         public void Execute(object parameter)
         {
             if (EncryptViewModel.Thread2.ThreadState == System.Threading.ThreadState.Suspended)
+            {
+             
                 EncryptViewModel.Thread2.Resume();
+             
+
+                
+            }
             else
-                this.EncryptViewModel.Thread2.Suspend();
+                EncryptViewModel.Thread2.Suspend();
         }
     }
 }

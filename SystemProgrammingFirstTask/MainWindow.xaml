@@ -40,8 +40,40 @@
                 </ListView>
                 <StackPanel Orientation="Horizontal">
                     <Button Width="80" Height="40" FontSize="20" Command="{Binding PlayCommand}" Content="Play" Background="IndianRed" Margin="10,10"></Button>
-                    <Button Width="80" Height="40" FontSize="20" Command="{Binding PauseCommand}" Content="Pause" Background="IndianRed" Margin="10,10"></Button>
-                    <Button Width="80" Height="40" FontSize="20" Command="{Binding ResumeCommand}" Content="Resume" Background="IndianRed" Margin="10,10"></Button>
+                    <Button Width="80" Height="40" FontSize="20" Command="{Binding PauseCommand}" Content="Pause" Background="IndianRed" Margin="10,10">
+                     
+                            <Button.Style>
+                                <Style TargetType="{x:Type Button}">
+                                    <Setter Property="IsEnabled" Value="True"></Setter>
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding StateThread1, Mode=TwoWay}" Value="1">
+                                            <Setter Property="IsEnabled" Value="True"></Setter>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding StateThread1, Mode=TwoWay}" Value="2">
+                                            <Setter Property="IsEnabled" Value="False"></Setter>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        
+                    </Button>
+                    <Button Width="80" Height="40" FontSize="20" Command="{Binding ResumeCommand}" Content="Resume" Background="IndianRed" Margin="10,10">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="IsEnabled" Value="False"></Setter>
+
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding StateThread1, Mode=TwoWay}" Value="1">
+                                        <Setter Property="IsEnabled" Value="False"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding StateThread1, Mode=TwoWay}" Value="2">
+                                        <Setter Property="IsEnabled" Value="True"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
                 </StackPanel>
             </StackPanel>
         </Grid>
@@ -75,8 +107,38 @@
                 </ListView>
                 <StackPanel Orientation="Horizontal">
                     <Button Width="80" Height="40" FontSize="20" Command="{Binding DePlayCommand}" Content="Play" Background="IndianRed" Margin="10,10"></Button>
-                    <Button Width="80" Height="40" FontSize="20" Command="{Binding DePauseCommand}" Content="Pause" Background="IndianRed" Margin="10,10"></Button>
-                    <Button Width="80" Height="40" FontSize="20" Command="{Binding DeResumeCommand}" Content="Resume" Background="IndianRed" Margin="10,10"></Button>
+                    <Button Width="80" Height="40" FontSize="20" Command="{Binding DePauseCommand}" Content="Pause" Background="IndianRed" Margin="10,10">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="IsEnabled" Value="True"></Setter>
+
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding StateThread2, Mode=TwoWay}" Value="1">
+                                        <Setter Property="IsEnabled" Value="False"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding StateThread2, Mode=TwoWay}" Value="2">
+                                        <Setter Property="IsEnabled" Value="True"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button Width="80" Height="40" FontSize="20" Command="{Binding DeResumeCommand}" Content="Resume" Background="IndianRed" Margin="10,10">
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button}">
+                                <Setter Property="IsEnabled" Value="False"></Setter>
+
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding StateThread2, Mode=TwoWay}" Value="1">
+                                        <Setter Property="IsEnabled" Value="False"></Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding StateThread2, Mode=TwoWay}" Value="2">
+                                        <Setter Property="IsEnabled" Value="True"></Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
                 </StackPanel>
             </StackPanel>
         </Grid>
